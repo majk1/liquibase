@@ -47,7 +47,8 @@ public class XMLChangeLogSAXParser_RealFile_Test extends Specification {
     def "namespace configured correctly"() {
         expect:
         assert new XMLChangeLogSAXParser().saxParserFactory.isNamespaceAware()
-        assert new XMLChangeLogSAXParser().saxParserFactory.isValidating()
+        // disabled due to internal xsd schema usage
+        // assert new XMLChangeLogSAXParser().saxParserFactory.isValidating()
     }
 
     def "supports method identifies xml files correctly"() {
